@@ -23,11 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     # build Job 내의 step 목록입니다.
     steps:
-      -uses: actions/checkout@v2
-      -uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-node@v2
         with:
-        node-version:16
-        cache:npm
+        node-version: '16'
       -run: npm install
 
       -name: Build
