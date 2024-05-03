@@ -21,9 +21,6 @@ jobs:
   build:
     # Runner가 실행되는 환경을 정의하는 부분입니다.
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
     # build Job 내의 step 목록입니다.
     steps:
       # uses 키워드를 통해 Action을 불러올 수 있습니다.
