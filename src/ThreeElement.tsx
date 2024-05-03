@@ -8,6 +8,7 @@ const xWidth = 600;
 const startPosX = xWidth*0.5*0.2;
 let posX = startPosX
 let posY = 30;
+
 export default function ThreeElement(){
     useFrame((state, delta) => {
         // console.log('amOp : ',amOp)
