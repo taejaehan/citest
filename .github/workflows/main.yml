@@ -35,7 +35,7 @@ jobs:
       # uses 키워드를 통해 Action을 불러올 수 있습니다.
       # 여기에서는 해당 레포지토리로 check-out하여 레포지토리에 접근할 수 있는 Action을 불러왔습니다.
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           node-version: ${{ matrix.node-version }}
       - name: Npm Install, build and test
