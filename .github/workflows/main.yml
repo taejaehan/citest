@@ -23,10 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     # build Job 내의 step 목록입니다.
     steps:
-      # uses 키워드를 통해 Action을 불러올 수 있습니다.
-      # 여기에서는 해당 레포지토리로 check-out하여 레포지토리에 접근할 수 있는 Action을 불러왔습니다.
-      - uses: actions/checkout@v2
-
       # 여기서 실행되는 커맨드에 대한 설명으로, Workflow에 표시됩니다.
       - name: Run a one-line script
         run: echo Hello, world!
@@ -36,9 +32,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
+      # uses 키워드를 통해 Action을 불러올 수 있습니다.
+      # 여기에서는 해당 레포지토리로 check-out하여 레포지토리에 접근할 수 있는 Action을 불러왔습니다.
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
         with:
           node-version: ${{ matrix.node-version }}
       - name: Npm Install, build and test
