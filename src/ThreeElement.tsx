@@ -27,7 +27,7 @@ export default function ThreeElement(){
     const [amOp, setAmOp] = useState<any>({posX:startPosX}); 
 
     useEffect(()=>{
-        const audioSource = document.getElementById('audio');
+        const audioSource = document.getElementById('audio') as HTMLMediaElement;
         if(audioSource){
             const audioMotion = new AudioMotionAnalyzer(null,
                 {
